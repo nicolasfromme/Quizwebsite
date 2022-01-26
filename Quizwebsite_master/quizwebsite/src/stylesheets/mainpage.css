@@ -1,0 +1,137 @@
+body{
+    background-color: #e5cba6;
+}
+
+#spacer {
+    border-color: #2a1e33;
+    width: 4rem;
+    height: 0.1rem;
+    margin: 2.5rem 0rem 0rem 0.6rem;
+    opacity: 100;
+}
+
+#heading {
+    color: #2a1e33;
+    font-size: 5rem;
+    padding: 0rem 0rem 2rem 0.5rem;
+}
+
+#subheading1 {
+    color: #2a1e33;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+
+#subheading2 {
+    color: #2a1e33;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+#bewertungheader {
+    color: #2a1e33;
+    font-size: 1.6rem;
+    margin-left: -0.5rem;
+}
+
+#fordwardicon {
+    position: relative;
+    left: 0.6rem;
+    bottom: 0.2rem;
+}
+
+#bewertung {
+    margin-left: 1.5rem;
+    background-color: #2a1e33;
+    width: 320px;
+    height: 140px;
+    border: 1px solid #2a1e33;
+    border-radius: 20px;
+
+}
+
+#avatar {
+    margin: 0.8rem;
+}
+
+#star {
+    color: rgb(255, 136, 0);
+}
+
+#stars{
+    margin: -3rem 0rem 0rem 4rem;
+
+}
+
+#bewertungtext {
+    color: #FFF;
+    padding: 0.7rem 0.5rem 0.5rem 4rem;
+    font-size:19px;
+}
+
+#dreieck {
+    width: 0px;
+    height: 0px;
+
+    border-top: 20px solid #2a1e33;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    
+    position: relative;
+    left: 43%;
+    top: 22px;
+}
+
+#svg {
+    position:absolute;
+    width: 47%;
+    height: 55%;
+
+    margin-top: 9rem;
+    margin-right: 2rem;
+
+    object-fit: contain;
+}
+
+
+
+#sec2 {
+    padding-top: 15rem;
+}
+
+#sec2-h1 {
+    text-align: center;
+    color: #2a1e33;
+    padding-bottom: 2rem;
+}
+
+
+
+@media (max-width: 383px) {
+    #bewertung {
+        margin-left: 0.5rem;
+    }
+
+    #svg {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    
+
+    #svg {
+        display: none;
+    }
+    #svgCol {
+        display: none;
+    }
+}
+
+@media (max-width: 1150px) {
+    #svgCol {
+        display: none;
+    }
+}
