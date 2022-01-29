@@ -161,6 +161,7 @@ class Arbeitslosengeld extends React.Component {
                 <Button id="button" onClick={() => this.increment(1)} variant="contained" color="secondary">
                 Start
                 </Button>
+                <br/>
                 <Button id="button" onClick={() => this.increment(5)} variant="contained" color="secondary">
                 Ich weiß dass ich Anspruch auf Arbeitslosengeld habe
                 </Button>

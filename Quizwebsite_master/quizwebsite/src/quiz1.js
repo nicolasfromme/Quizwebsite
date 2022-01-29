@@ -161,8 +161,6 @@ class Testbody extends React.Component {
 
       
     }
-
-    
   
     increment = (val) => {
       this.setState({
@@ -178,21 +176,20 @@ class Testbody extends React.Component {
         lastCount: this.state.count
       })
     }
+
+    stateToOne = () => {
+      this.setState({
+        count: 1
+      })
+    }
   
-    Goback = () => {
+    Goback = () => { // nicht mehr in Verwendung, funktioniert halb
       console.log(this.state.count)
       console.log(this.state.lastCount)
       this.setState({
         count: this.state.count - this.state.lastCount
       });
     }
-
-    postData = () => { 
-      console.log("fhjkds")
-      const d2 = "Hello"
-      const data = {d2}
-      axios.post("http://localhost:5000/api", data)
-  }
 
     /*
         1004: 0 -> bei Eltern wohnend
@@ -480,13 +477,10 @@ class Testbody extends React.Component {
             <Button onClick={() => this.increment(1)} variant="contained" color="secondary" id="button">
             Jetzt starten
             </Button>
-            <Button onClick={() => this.postData()} variant="contained" color="secondary" id="button">
-            Post Data
-            </Button>
           </div>
             
           <div id="centerBtn">
-            <Button onClick={() => this.increment(999)} color="secondary" id="buttonBack">
+            <Button onClick={() => this.increment(999)} variant="contained" color="secondary" id="button">
             Ich weiß dass ich Anspruch auf Bafög habe.
             </Button>
           </div>  
@@ -511,14 +505,6 @@ class Testbody extends React.Component {
           <div id ="centerBtn">
             <Button id="button" onClick={() => this.increment(3)} variant="contained" color="secondary">
             Student
-            </Button>
-          </div>
-
-          
-
-          <div id="centerBtn">
-            <Button onClick={() => this.Goback()}  color="secondary" id="buttonBack">
-            zurück
             </Button>
           </div>
         </div>
@@ -571,13 +557,6 @@ class Testbody extends React.Component {
             Promotion
             </Button>
           </div>
-
-          
-          <div id="centerBtn">
-            <Button onClick={() => this.Goback()}  color="secondary" id="buttonBack">
-            zurück
-            </Button>
-          </div>
         </div>
       )
     }
@@ -615,8 +594,8 @@ class Testbody extends React.Component {
          
           
           <div id="centerBtn">
-            <Button onClick={() => this.Goback()}  color="secondary" id="buttonBack">
-            zurück
+            <Button onClick={() => this.stateToOne()}  color="secondary" variant="contained" id="button">
+            Zurück zur Startseite
             </Button>
           </div>
         </div>
@@ -657,15 +636,6 @@ class Testbody extends React.Component {
             Anderes Ausbildungsverhältnis
             </Button>
           </div>
-
-         
-          <div id="centerBtn">
-            <Button onClick={() => this.Goback()}  color="secondary" id="buttonBack">
-            zurück
-            </Button>
-          </div>
-            
-
         </div>
       )
     }
@@ -677,8 +647,8 @@ class Testbody extends React.Component {
          
           
           <div id="centerBtn">
-            <Button onClick={() => this.Goback()}  color="secondary" id="buttonBack">
-            zurück
+            <Button id="button" onClick={() => this.decrement(100)}  color="secondary" id="buttonBack">
+            Zur Startseite
             </Button>
           </div>
         </div>
@@ -701,13 +671,6 @@ class Testbody extends React.Component {
             Teilzeit
             </Button>
           </div>
-         
-          
-          <div id="centerBtn">
-            <Button onClick={() => this.Goback()}  color="secondary" id="buttonBack">
-            zurück
-            </Button>
-          </div>
         </div>
       )
     }
@@ -716,18 +679,9 @@ class Testbody extends React.Component {
       return(
         <div id="quiz">
           <h2 id="text">Hurra, du hast Anspruch auf Bafög.</h2>
-
-          <div id="centerBtn">
-            <Button onClick={() => this.increment(898)} variant="contained" color="secondary">
+            <Button id="button" onClick={() => this.increment(898)} variant="contained" color="secondary">
               Wie viel Bafög steht mir zu?
             </Button>
-          </div>
-         
-          <div id="centerBtn">
-            <Button onClick={() => this.Goback()}  color="secondary" id="buttonBack">
-            zurück
-            </Button>
-          </div>
         </div>
       )
     }
@@ -778,14 +732,6 @@ class Testbody extends React.Component {
             Anderes Ausbildungsverhältnis
             </Button>
           </div>
-
-          
-          <div id="centerBtn">
-            <Button onClick={() => this.Goback()}  color="secondary" id="buttonBack">
-            zurück
-            </Button>
-          </div>
-
        </div>
         )
     }
@@ -836,14 +782,6 @@ class Testbody extends React.Component {
             Anderes Ausbildungsverhältnis
             </Button>
           </div>
-
-          
-          <div id="centerBtn">
-            <Button onClick={() => this.Goback()}  color="secondary" id="buttonBack">
-            zurück
-            </Button>
-          </div>
-
         </div>
         )
     }
